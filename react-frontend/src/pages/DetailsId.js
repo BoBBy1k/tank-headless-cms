@@ -17,8 +17,11 @@ query GetListing($id: ID!){
         model,
         class,
         year,
-        gun,
-        description
+        description,
+        enginehp,
+        enginetype,
+        gunbore,
+        guncaliber
       }
     }
   }
@@ -50,7 +53,8 @@ export default function DetailsId() {
           <div className="model">Model: {data.listing.data.attributes.model}</div>
           <div className="class">Class: {data.listing.data.attributes.class}</div>
           <div className="year">Year: {data.listing.data.attributes.year}</div>
-          <div className="gun">Gun: {data.listing.data.attributes.gun}</div>
+          <div className="gun">Gun: {data.listing.data.attributes.gunbore}mm L/{data.listing.data.attributes.guncaliber}</div>
+          <div className="engine">Engine: {data.listing.data.attributes.enginehp}hp {data.listing.data.attributes.enginetype}</div>
           <p>{data.listing.data.attributes.description}</p>
         </div>
       : "Loading..."}

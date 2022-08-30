@@ -24,7 +24,7 @@ function App() {
           <Route path ="/post" element={<Post />} />
           <Route path ="/saved" element={<Saved />} />
           <Route path ="/settings" element={<Settings />} />
-          <Route path ="/cart" element={<Saved />} />
+          <Route path ="/cart" element={<Cart />} />
           <Route path ="/details">
             <Route index element={<Details />} />
             <Route path =":id" element={<DetailsId />} />

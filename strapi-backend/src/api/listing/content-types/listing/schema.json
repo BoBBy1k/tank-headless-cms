@@ -57,9 +57,17 @@
       "target": "api::type.type",
       "inversedBy": "listings"
     },
-    "gun": {
-      "type": "string",
-      "required": true
+    "enginehp": {
+      "type": "integer"
+    },
+    "enginetype": {
+      "type": "string"
+    },
+    "gunbore": {
+      "type": "integer"
+    },
+    "guncaliber": {
+      "type": "integer"
     }
   }
 }
