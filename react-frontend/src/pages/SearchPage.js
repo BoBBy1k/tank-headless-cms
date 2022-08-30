@@ -1,5 +1,4 @@
 import React from 'react'
-import useFetch from '../hooks/useFetch.js'
 import { Link } from 'react-router-dom';
 import { OverlayTrigger, Tooltip, Card, Spinner, Col, Row, Container} from 'react-bootstrap'
 import StarGenerator from '../components/StarGenerator.js'
@@ -7,11 +6,30 @@ import logo from '../logo.svg';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './pages.css'
 import AlertBanner from '../components/AlertBanner.js'
+// import useFetch from '../hooks/useFetch.js'
+import {useQuery, gql } from '@apollo/client'
 //#282c34
 
 export default function SearchPage() {
-  const {loading, error, data } = useFetch('http://localhost:1337/api/listings')
-  console.log(data.data)
+  //Fetch API
+  // const {loading, error, data } = useFetch('http://localhost:1337/api/listings')
+  const LISTINGS = gql`
+  query GetListings{
+    listings{
+      data {
+        id
+        attributes {
+          variant
+          rating
+          description
+        }
+      }
+    }
+  }
+  `
+  const {loading, error, data} =useQuery(LISTINGS)
+
+  console.log(data)
   if (loading) {
     return(
       <Spinner animation="border" role="status">
@@ -32,7 +50,7 @@ export default function SearchPage() {
       <AlertBanner />
       <Container>
       <Row>
-      {data.length !== 0 ? data.data.map((item)=> (
+      {data !== undefined ? data.listings.data.map((item)=> (
         <Col key={item.id}>
             <Link to={`/details/${item.id}`} style={ {textDecoration: "none"} }>
             <OverlayTrigger placement="top"

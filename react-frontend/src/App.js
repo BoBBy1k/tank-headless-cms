@@ -11,11 +11,9 @@ import DetailsId from './pages/DetailsId.js'
 import Details from './pages/Details.js'
 import NotFound from './pages/NotFound.js'
 
-
-
-
 function App() {
   return (
+
     <div className="App-header">
       <div className="App">
         <Routes>
@@ -31,8 +29,8 @@ function App() {
             <Route index element={<Details />} />
             <Route path =":id" element={<DetailsId />} />
           </Route>
-          <Route path="*" element={<NotFound />} />
-        </Route>
+            <Route path="*" element={<NotFound />} />
+          </Route>
         </Routes>
       </div>
     </div>

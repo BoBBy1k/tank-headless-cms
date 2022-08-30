@@ -9,10 +9,10 @@ export default function StarGenerator(starCount) {
   return (
     <>
       {[...Array(fullStars)].map((e,index )=> {
-        return <i className="bi bi-star-fill" key={index} />
+        return <i className="bi bi-star-fill" style={{color: "orange"}} key={index} />
       })}
       {[...Array(halfStars)].map((e,index )=> {
-        return <i className="bi bi-star-half" key={index} />
+        return <i className="bi bi-star-half" style={{color: "orange"}} key={index} />
       })}
       {[...Array(remaining)].map((e,index)=> {
         return <i className="bi bi-star" key={index} />

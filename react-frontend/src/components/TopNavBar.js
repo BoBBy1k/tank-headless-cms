@@ -18,9 +18,8 @@ function TopNavBar() {
             <Nav.Link as={Link} to="/saved"><i className="bi bi-heart" /> Saved</Nav.Link>
             <Nav.Link as={Link} to="/settings"><i className="bi bi-gear" /> Settings</Nav.Link>
             <Nav.Link as={Link} to="/cart"><i className="bi bi-truck-flatbed" /> Cart</Nav.Link>
-            <a className="nav-link" href="https://www.linkedin.com/in/evanfischler/"><i className="bi bi-linkedin"  style={{color:"#0072b1"}}/> Share with Evan</a>
-
-
+            {/* This is a joke for my friend when he bug tests the UI */}
+            {/* <a className="nav-link" href="https://www.linkedin.com/in/evanfischler/"><i className="bi bi-linkedin"  style={{color:"#0072b1"}}/> Share with Evan</a> */}
 
             {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>

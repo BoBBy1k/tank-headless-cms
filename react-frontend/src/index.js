@@ -6,12 +6,22 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom'
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
+import { ApolloClient, InMemoryCache, ApolloProvider, gql } from "@apollo/client"
+
+//Apollo Client
+const client = new ApolloClient({
+  uri: 'http://localhost:1337/graphql',
+  cache: new InMemoryCache()
+});
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <ApolloProvider client={client}>
     <BrowserRouter>
       <App />
     </BrowserRouter>
+    </ApolloProvider>
   </React.StrictMode>
 );
 
