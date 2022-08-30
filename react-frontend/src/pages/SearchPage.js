@@ -50,7 +50,7 @@ export default function SearchPage() {
       <AlertBanner />
       <Container>
       <Row>
-      {data !== undefined ? data.listings.data.map((item)=> (
+      {data.length !== 0 ? data.listings.data.map((item)=> (
         <Col key={item.id}>
             <Link to={`/details/${item.id}`} style={ {textDecoration: "none"} }>
             <OverlayTrigger placement="top"
