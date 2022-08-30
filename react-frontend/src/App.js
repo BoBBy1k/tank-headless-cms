@@ -13,7 +13,6 @@ import NotFound from './pages/NotFound.js'
 
 function App() {
   return (
-
     <div className="App-header">
       <div className="App">
         <Routes>

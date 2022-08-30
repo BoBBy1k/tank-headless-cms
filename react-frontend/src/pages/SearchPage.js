@@ -10,6 +10,8 @@ import AlertBanner from '../components/AlertBanner.js'
 import {useQuery, gql } from '@apollo/client'
 //#282c34
 
+import FilterType from '../components/filters/FilterType.js'
+
 export default function SearchPage() {
   //Fetch API
   // const {loading, error, data } = useFetch('http://localhost:1337/api/listings')
@@ -19,9 +21,31 @@ export default function SearchPage() {
       data {
         id
         attributes {
-          variant
-          rating
+          variant,
+          rating,
           description
+        }
+      }
+    }
+    types {
+      data {
+        id,
+        attributes {
+          type,
+          type_listings {
+            data{
+              id,
+              attributes{
+                variant,
+                rating,
+                model,
+                class,
+                year,
+                description,
+                featured,
+              }
+            }
+          }
         }
       }
     }

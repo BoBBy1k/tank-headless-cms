@@ -9,8 +9,9 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import { ApolloClient, InMemoryCache, ApolloProvider, gql } from "@apollo/client"
 
 //Apollo Client
+//?populate=* is important for Strapi. Otherwise it wont send full relational data with queries
 const client = new ApolloClient({
-  uri: 'http://localhost:1337/graphql',
+  uri: 'http://localhost:1337/graphql?populate=*',
   cache: new InMemoryCache()
 });
 

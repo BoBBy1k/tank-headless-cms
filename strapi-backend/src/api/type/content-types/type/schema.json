@@ -15,11 +15,11 @@
     "type": {
       "type": "string"
     },
-    "listings": {
+    "type_listings": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToMany",
       "target": "api::listing.listing",
-      "mappedBy": "type"
+      "inversedBy": "types"
     }
   }
 }
