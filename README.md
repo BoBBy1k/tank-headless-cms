@@ -3,7 +3,7 @@
 This project has reached MVP (Minimal Viable Product) status and is no longer being developed.
 
 Technologies used:
-Strapi CMS, GraphQL, Bootstrap, React and React Router
+Strapi CMS (With SQLite), GraphQL, Bootstrap, React and React Router
 
 A React/Strapi Headless CMS mockup of a used Tank marketplace specializing in WW2 era vehicles with detailed statistics and historic descriptions on a catalog of tank variants for educational and entertainment purposes.
 
