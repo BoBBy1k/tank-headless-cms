@@ -1,4 +1,4 @@
-# tank-headless-cms
+# Tank Headless CMS
 
 This project has reached MVP (Minimal Viable Product) status and is no longer being developed.
 
